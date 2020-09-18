@@ -70,7 +70,7 @@ class _ServiceState extends State<Service> {
               );Navigator.push(context, route);
             },
             child: Text(
-              'ดาวน์โหลด',
+              'เอกสารเพื่อการศึกษา',
               style:
                   TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
             ),

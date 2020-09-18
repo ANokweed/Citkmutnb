@@ -19,7 +19,7 @@ class _HistoryState extends State<History> {
             tabs: <Widget>[
               Tab(icon: Icon(Icons.assignment), text: 'ประวัติ',),
               Tab(icon: Icon(Icons.school), text: 'ปรัชญา',),
-              Tab(icon: Icon(Icons.settings), text: 'สัญญาลักษณ์',),
+              Tab(icon: Icon(Icons.settings), text: 'สัญลักษณ์',),
               // Text('ประวัติ'),
               // Text('ปรัชญา'),
               // Text('สัญญาลักษณ์'),
