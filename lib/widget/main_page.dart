@@ -53,7 +53,7 @@ class _MainPageState extends State<MainPage> {
 
   SizedBox mySizebox() {
     return SizedBox(
-      height: 24.0,
+      height: 40,
     );
   }
 

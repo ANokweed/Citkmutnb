@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:citkmutnb/utility/my_constant.dart';
+import 'package:citkmutnb/utility/my_style.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 
@@ -32,8 +33,8 @@ class _ShowPictureState extends State<ShowPicture> {
 
     for (var map in result) {
       Widget myWidget = Container(
-        width: 80,
-        height: 80,
+        width: 300,
+        height: 150,
         child: Image.network(
             '${MyConstant().domain}/cit/image_roomenet/${map['img_name']}'),
       );
@@ -48,8 +49,13 @@ class _ShowPictureState extends State<ShowPicture> {
     return Scaffold(
       appBar: AppBar(),
       body: widgets.length == 0
+          // ? Mystyle().showProgress()
+          // : GridView.extent(
+          //     maxCrossAxisExtent: 400,
+          //     children: widgets,
+          //   ),
           ? Center(
-              child: CircularProgressIndicator(),
+              child: CircularProgressIndicator(), 
             )
           : ListView.builder(itemCount: widgets.length,
               itemBuilder: (context, index) => widgets[index],

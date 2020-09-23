@@ -56,7 +56,7 @@ class _HomeState extends State<Home> {
         child: Image.asset('images/news.png'),
       ),activeIcon: Container(width: 48.0,height: 48.0,child: Image.asset('images/anews.png'), ),
       title: Text(
-        'ข่าวสาร',
+        'สอบถาม',
         style: TextStyle(color: Colors.white),
       ),
     );
@@ -84,7 +84,7 @@ class _HomeState extends State<Home> {
         child: Image.asset('images/cadel.png'),
       ),activeIcon: Container(width: 48.0,height: 48.0,child: Image.asset('images/acadel.png'), ),
       title: Text(
-        'ปฏทิน',
+        'คู่มือ',
         style: TextStyle(color: Colors.white),
       ),
     );
@@ -108,10 +108,10 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         title: Text('เมนูหลัก'),
         actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.search),
-            onPressed: () {},
-          )
+          // IconButton(
+          //   icon: Icon(Icons.search),
+          //   onPressed: () {},
+          // )
         ],
       ),
     );

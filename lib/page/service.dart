@@ -19,7 +19,7 @@ class _ServiceState extends State<Service> {
         children: <Widget>[
           Mystyle().mySizeBox(50),
           buttonTop(),
-          Mystyle().mySizeBox(15),
+          Mystyle().mySizeBox(20),
           buttonMediumTop(),
         ],
       ),
@@ -32,10 +32,10 @@ class _ServiceState extends State<Service> {
       children: <Widget>[
         Container(
           width: 320.0,
-          height: 40.0,
+          height: 50.0,
           child: RaisedButton(
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(15.0),
+              borderRadius: BorderRadius.circular(50.0),
             ),
             color: Colors.orange,
             onPressed: () {
@@ -58,10 +58,10 @@ class _ServiceState extends State<Service> {
       children: <Widget>[
         Container(
           width: 320.0,
-          height: 40.0,
+          height: 50.0,
           child: RaisedButton(
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(15.0),
+              borderRadius: BorderRadius.circular(50.0),
             ),
             color: Colors.orange,
             onPressed: () {
@@ -70,7 +70,7 @@ class _ServiceState extends State<Service> {
               );Navigator.push(context, route);
             },
             child: Text(
-              'เอกสารเพื่อการศึกษา',
+              'เอกสารการศึกษา',
               style:
                   TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
             ),

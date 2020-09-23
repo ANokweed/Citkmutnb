@@ -1,3 +1,4 @@
+import 'package:citkmutnb/utility/my_style.dart';
 import 'package:flutter/material.dart';
 
 class HistoryWidget extends StatefulWidget {
@@ -11,6 +12,7 @@ class _HistoryWidgetState extends State<HistoryWidget> {
     return ListView(
       padding: EdgeInsets.all(25),
       children: <Widget>[
+        Mystyle().showTitle('ประวัติ'),
         content1(),
         mySizeBox(),
         content2(),

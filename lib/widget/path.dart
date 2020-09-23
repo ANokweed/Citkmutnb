@@ -11,14 +11,14 @@ class _PathState extends State<Path> {
   List<String> builds = ['42', '62', '63', '64', '65', '66', '67', '68', '69'];
   List<Color> colors = [
     Colors.red,
-    Colors.green,
-    Colors.indigo,
-    Colors.yellowAccent,
-    Colors.black38,
-    Colors.amberAccent,
-    Colors.lightBlue,
-    Colors.purple,
-    Colors.orange
+    Colors.lightGreenAccent.shade400,
+    Colors.indigoAccent.shade400,
+    Colors.purpleAccent,
+    Colors.purple.shade700,
+    Colors.amberAccent.shade700,
+    Colors.deepPurple.shade900,
+    Colors.pinkAccent.shade400,
+    Colors.tealAccent.shade400
   ];
   List<Widget> widgets = List();
   LatLng centerMap = LatLng(13.819177, 100.514284);
@@ -39,82 +39,82 @@ class _PathState extends State<Path> {
   Marker build42() {
     LatLng latLng = LatLng(13.819494, 100.516089);
     return Marker(
-        markerId: MarkerId('build42'),
+        markerId: MarkerId('build 42'),
         position: latLng,
-        infoWindow: InfoWindow(title: 'อาคาร 42', snippet: 'อธิบายอาคาร42'),
-        icon: BitmapDescriptor.defaultMarkerWithHue(60));
+        infoWindow: InfoWindow(title: 'อาคาร 42', snippet: 'อธิบายอาคาร 42'),
+        icon: BitmapDescriptor.defaultMarkerWithHue(5));
   }
 
   Marker build62() {
     LatLng latLng = LatLng(13.820515, 100.515956);
     return Marker(
-        markerId: MarkerId('build62'),
+        markerId: MarkerId('build 62'),
         position: latLng,
-        infoWindow: InfoWindow(title: 'อาคาร 62', snippet: 'อธิบายอาคาร62'),
-        icon: BitmapDescriptor.defaultMarkerWithHue(160));
+        infoWindow: InfoWindow(title: 'อาคาร 62', snippet: 'อธิบายอาคาร 62'),
+        icon: BitmapDescriptor.defaultMarkerWithHue(100));
   }
 
   Marker build63() {
     LatLng latLng = LatLng(13.820524, 100.516545);
     return Marker(
-        markerId: MarkerId('build63'),
+        markerId: MarkerId('build 63'),
         position: latLng,
-        infoWindow: InfoWindow(title: 'อาคาร 63', snippet: 'อธิบายอาคาร63'),
-        icon: BitmapDescriptor.defaultMarkerWithHue(95));
+        infoWindow: InfoWindow(title: 'อาคาร 63', snippet: 'อธิบายอาคาร 63'),
+        icon: BitmapDescriptor.defaultMarkerWithHue(200));
   }
 
   Marker build64() {
     LatLng latLng = LatLng(13.820973, 100.515676);
     return Marker(
-        markerId: MarkerId('build64'),
+        markerId: MarkerId('build 64'),
         position: latLng,
-        infoWindow: InfoWindow(title: 'อาคาร 64', snippet: 'อธิบายอาคาร64'),
-        icon: BitmapDescriptor.defaultMarkerWithHue(12));
+        infoWindow: InfoWindow(title: 'อาคาร 64', snippet: 'อธิบายอาคาร 64'),
+        icon: BitmapDescriptor.defaultMarkerWithHue(300));
   }
 
   Marker build65() {
     LatLng latLng = LatLng(13.821148, 100.516039);
     return Marker(
-        markerId: MarkerId('build42'),
+        markerId: MarkerId('build 65'),
         position: latLng,
-        infoWindow: InfoWindow(title: 'อาคาร 42', snippet: 'อธิบายอาคาร42'),
-        icon: BitmapDescriptor.defaultMarkerWithHue(50));
+        infoWindow: InfoWindow(title: 'อาคาร 65', snippet: 'อธิบายอาคาร 65'),
+        icon: BitmapDescriptor.defaultMarkerWithHue(270));
   }
 
   Marker build66() {
     LatLng latLng = LatLng(13.820964, 100.516241);
     return Marker(
-        markerId: MarkerId('build62'),
+        markerId: MarkerId('build 66'),
         position: latLng,
-        infoWindow: InfoWindow(title: 'อาคาร 62', snippet: 'อธิบายอาคาร62'),
-        icon: BitmapDescriptor.defaultMarkerWithHue(88));
+        infoWindow: InfoWindow(title: 'อาคาร 66', snippet: 'อธิบายอาคาร 66'),
+        icon: BitmapDescriptor.defaultMarkerWithHue(40));
   }
 
   Marker build67() {
     LatLng latLng = LatLng(13.820926, 100.516361);
     return Marker(
-        markerId: MarkerId('build63'),
+        markerId: MarkerId('build 67'),
         position: latLng,
-        infoWindow: InfoWindow(title: 'อาคาร 63', snippet: 'อธิบายอาคาร63'),
-        icon: BitmapDescriptor.defaultMarkerWithHue(51));
+        infoWindow: InfoWindow(title: 'อาคาร 67', snippet: 'อธิบายอาคาร 67'),
+        icon: BitmapDescriptor.defaultMarkerWithHue(250));
   }
 
   Marker build68() {
     LatLng latLng = LatLng(13.820866, 100.516562);
     return Marker(
-        markerId: MarkerId('build62'),
+        markerId: MarkerId('build 68'),
         position: latLng,
-        infoWindow: InfoWindow(title: 'อาคาร 62', snippet: 'อธิบายอาคาร62'),
-        icon: BitmapDescriptor.defaultMarkerWithHue(76));
+        infoWindow: InfoWindow(title: 'อาคาร 68', snippet: 'อธิบายอาคาร 68'),
+        icon: BitmapDescriptor.defaultMarkerWithHue(350));
   }
 
   Marker build69() {
     LatLng latLng = LatLng(13.820848, 100.516812);
     return Marker(
-        markerId: MarkerId('build63'),
+        markerId: MarkerId('build 69'),
         position: latLng,
-        infoWindow: InfoWindow(title: 'อาคาร 63', snippet: 'อธิบายอาคาร63'),
-        icon: BitmapDescriptor.defaultMarkerWithHue(66));
+        infoWindow: InfoWindow(title: 'อาคาร 69', snippet: 'อธิบายอาคาร 69'),
+        icon: BitmapDescriptor.defaultMarkerWithHue(170));
   }
 
   Set<Marker> mySet() {

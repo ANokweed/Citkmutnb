@@ -112,8 +112,9 @@ class _ClassRoomPak1State extends State<ClassRoomPak1> {
                   itemBuilder: (context, index2) => Row(
                     children: <Widget>[
                       Container(
-                        width: 100,
-                        height: 100,
+                        width: 200,
+                        height: 130,
+                        // color: Colors.indigo.shade900,
                         child: GestureDetector(
                           onTap: () {
                             String branch = branchs[index];
@@ -124,7 +125,7 @@ class _ClassRoomPak1State extends State<ClassRoomPak1> {
                           },
                           child: Card(
                             child: Center(
-                              child: Text(listRooms[index][index2]),
+                              child: Text(listRooms[index][index2], style: TextStyle(color: Colors.orange.shade900),),
                             ),
                           ),
                         ),

@@ -35,7 +35,7 @@ class _ShowiistDownloadState extends State<ShowiistDownload> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('เอกสารเพื่อการศึกษา'),
+          title: Text('เอกสารการศึกษา'),
         ),
         body: fileNames.length == 0
             ? Center(
@@ -47,15 +47,26 @@ class _ShowiistDownloadState extends State<ShowiistDownload> {
                   onTap: () {
                     MaterialPageRoute route = MaterialPageRoute(
                       builder: (context) => ShowPdf(
-                        namePDF: fileNames[index],catigory: 'file_download',
+                        namePDF: fileNames[index],
+                        catigory: 'file_download',
                       ),
                     );
                     Navigator.push(context, route);
                   },
                   child: Card(
-                    child: Container(
-                      margin: EdgeInsets.all(16.0),
-                      child: Text(fileNames[index]),
+                    child: ListTile(
+                      leading: Icon(
+                        Icons.book,
+                        size: 30,
+                        color: Colors.orange,
+                      ),
+                      title: Container(
+                        margin: EdgeInsets.all(16),
+                        child: Text(
+                          fileNames[index],
+                          // style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                      ),
                     ),
                   ),
                 ),

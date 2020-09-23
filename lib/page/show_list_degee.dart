@@ -91,12 +91,12 @@ class _ShowListDegeeState extends State<ShowListDegee> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Container(
-            margin: EdgeInsets.only(top: 7.0),
+            margin: EdgeInsets.only(top: 9.0),
             decoration: BoxDecoration(
-              borderRadius: BorderRadiusDirectional.circular(15.0),
+              borderRadius: BorderRadiusDirectional.circular(35.0),
               color: Colors.orange,
             ),
-            width: 320.0,
+            width: 350.0,
             child: Column(
               children: <Widget>[
                 ExpansionTile(

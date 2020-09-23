@@ -49,7 +49,8 @@ class _Pak1State extends State<Pak1> {
               SliverPersistentHeader(
                 delegate: _SliverAppBarDelegate(
                   TabBar(
-                    labelColor: Colors.blue,
+                    labelColor: Colors.blueAccent.shade700,
+                    indicatorColor: Colors.lightBlueAccent,
                     tabs: [
                       Tab(
                         text: 'รายละเอียด',

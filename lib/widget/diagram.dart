@@ -66,17 +66,25 @@ class _DiagramState extends State<Diagram> {
               ),
             ),
           ),
-          child: Text(listModel[index][index2].nameroom),
+          child: Text(
+            listModel[index][index2].nameroom,
+            style: TextStyle(color: Colors.orange.shade700, fontSize: 14.5),
+          ),
         ),
       );
 
   Widget buildTextBuilding(int index) {
     return Row(
       children: [
-        Text(
-          'อาคาร ${builds[index]}',
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
+        // Mystyle().showTitle('อาคาร ${builds[index]}',),
+        Container(margin: EdgeInsets.only(top: 9.0),
+          child: Text(
+            'อาคาร ${builds[index]}', 
+            style: TextStyle(
+              fontSize: 20,
+              color: Colors.orange,
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ),
       ],

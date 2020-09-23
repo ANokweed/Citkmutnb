@@ -50,7 +50,8 @@ class _MapPageState extends State<MapPage> {
               SliverPersistentHeader(
                 delegate: _SliverAppBarDelegate(
                   TabBar(
-                    labelColor: Colors.blue,
+                    labelColor: Colors.blueAccent.shade700,
+                    indicatorColor: Colors.lightBlueAccent,
                     tabs: [
                       Tab(
                         text: 'แผนผัง',

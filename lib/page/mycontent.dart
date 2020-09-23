@@ -17,9 +17,9 @@ class _MycontentState extends State<Mycontent> {
       body: Column(
         children: <Widget>[
           Mystyle().mySizeBox(50.0),
-          buttonTop(),Mystyle().mySizeBox(15.0),
-          buttonMediumTop(),Mystyle().mySizeBox(15.0),
-          mediumbuttom(),Mystyle().mySizeBox(15.0),
+          buttonTop(),Mystyle().mySizeBox(20.0),
+          buttonMediumTop(),Mystyle().mySizeBox(20.0),
+          mediumbuttom(),Mystyle().mySizeBox(20.0),
           buttonButton(),
         ],
       ),
@@ -31,10 +31,10 @@ class _MycontentState extends State<Mycontent> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         Container(
-          width: 320.0, height: 40.0,
+          width: 320.0, height: 50.0,
           child: RaisedButton(
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(15.0),
+              borderRadius: BorderRadius.circular(50.0),
             ),
             color: Colors.orange,
             onPressed: () => routeToDegee(0),
@@ -63,10 +63,10 @@ class _MycontentState extends State<Mycontent> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         Container(
-          width: 320.0,height: 40.0,
+          width: 320.0,height: 50.0,
           child: RaisedButton(
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(15.0),
+              borderRadius: BorderRadius.circular(50.0),
             ),
             color: Colors.orange,
             onPressed: () => routeToDegee(1),
@@ -86,10 +86,10 @@ class _MycontentState extends State<Mycontent> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         Container(
-          width: 320.0,height: 40.0,
+          width: 320.0,height: 50.0,
           child: RaisedButton(
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(15.0),
+              borderRadius: BorderRadius.circular(50.0),
             ),
             color: Colors.orange,
             onPressed: () => routeToDegee(2),
@@ -109,10 +109,10 @@ class _MycontentState extends State<Mycontent> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         Container(
-          width: 320.0,height: 40.0,
+          width: 320.0,height: 50.0,
           child: RaisedButton(
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(15.0),
+              borderRadius: BorderRadius.circular(50.0),
             ),
             color: Colors.orange,
             onPressed: () {},
