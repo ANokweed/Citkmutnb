@@ -66,9 +66,24 @@ class _DiagramState extends State<Diagram> {
               ),
             ),
           ),
-          child: Text(
-            listModel[index][index2].nameroom,
-            style: TextStyle(color: Colors.orange.shade700, fontSize: 14.5),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Container(
+                    width: 200,
+                    child: Text(
+                      listModel[index][index2].nameroom,
+                      style: TextStyle(
+                          color: Colors.orange.shade700, fontSize: 14.5),
+                    ),
+                  ),
+                  Text('ชั้น ${listModel[index][index2].className}')
+                ],
+              ),Divider(thickness: 3, color: Colors.blue,)
+            ],
           ),
         ),
       );
@@ -77,9 +92,10 @@ class _DiagramState extends State<Diagram> {
     return Row(
       children: [
         // Mystyle().showTitle('อาคาร ${builds[index]}',),
-        Container(margin: EdgeInsets.only(top: 9.0),
+        Container(
+          margin: EdgeInsets.only(top: 9.0),
           child: Text(
-            'อาคาร ${builds[index]}', 
+            'อาคาร ${builds[index]}',
             style: TextStyle(
               fontSize: 20,
               color: Colors.orange,
