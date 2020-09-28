@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:citkmutnb/models/image_diagram.model.dart';
+import 'package:citkmutnb/page/show_big_picture.dart';
 import 'package:citkmutnb/utility/my_constant.dart';
 import 'package:citkmutnb/utility/my_style.dart';
 import 'package:dio/dio.dart';
@@ -51,20 +52,34 @@ class _ShoeImageFromDiagramState extends State<ShoeImageFromDiagram> {
         '${MyConstant().domain}/cit/getDiagramWherenameRoom.php?isAdd=true&nameroom=$nameRoom';
     Response response = await Dio().get(url);
     var result = json.decode(response.data);
+    int indexCard = 0;
     for (var map in result) {
       ImageDiagramModel model = ImageDiagramModel.fromJson(map);
-      Widget widget = createCard(model);
+      Widget widget = createCard(model, indexCard);
       setState(() {
         imageDiagramModels.add(model);
         widgets.add(widget);
       });
+      indexCard++;
     }
   }
 
-  Widget createCard(ImageDiagramModel model) {
+  Widget createCard(ImageDiagramModel model, int indexCard) {
     String string = '${MyConstant().domain}/cit/image_diagram/${model.imgName}';
-    return Card(
-      child: Image.network(string),
+    return GestureDetector(
+      onTap: () {
+        print('you cliek $indexCard');
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => ShowBigPicture(
+                model: imageDiagramModels[indexCard],
+              ),
+            ));
+      },
+      child: Card(
+        child: Image.network(string),
+      ),
     );
   }
 }

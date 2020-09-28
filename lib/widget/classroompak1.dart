@@ -125,7 +125,10 @@ class _ClassRoomPak1State extends State<ClassRoomPak1> {
                           },
                           child: Card(
                             child: Center(
-                              child: Text(listRooms[index][index2], style: TextStyle(color: Colors.orange.shade900),),
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text(listRooms[index][index2], style: TextStyle(color: Colors.orange.shade900),),
+                              ),
                             ),
                           ),
                         ),
