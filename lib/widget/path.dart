@@ -8,7 +8,7 @@ class Path extends StatefulWidget {
 }
 
 class _PathState extends State<Path> {
-  List<String> builds = ['42', '62', '63', '64', '65', '66', '67', '68', '69'];
+  List<String> builds = ['42', '62', '63', '64', '65', '66', '67', '68', '69', '90', '91', '97'];
   List<Color> colors = [
     Colors.red,
     Colors.lightGreenAccent.shade400,
@@ -18,7 +18,7 @@ class _PathState extends State<Path> {
     Colors.amberAccent.shade700,
     Colors.deepPurple.shade900,
     Colors.pinkAccent.shade400,
-    Colors.tealAccent.shade400
+    Colors.tealAccent.shade400,Colors.pinkAccent.shade400,Colors.pinkAccent.shade400,Colors.pinkAccent.shade400,
   ];
   List<Widget> widgets = List();
   LatLng centerMap = LatLng(13.819177, 100.514284);
@@ -110,6 +110,33 @@ class _PathState extends State<Path> {
 
   Marker build69() {
     LatLng latLng = LatLng(13.820848, 100.516812);
+    return Marker(
+        markerId: MarkerId('build 69'),
+        position: latLng,
+        infoWindow: InfoWindow(title: 'อาคาร 69', snippet: 'อธิบายอาคาร 69'),
+        icon: BitmapDescriptor.defaultMarkerWithHue(170));
+  }
+
+  Marker build90() {
+    LatLng latLng = LatLng(13.823506, 100.511709);
+    return Marker(
+        markerId: MarkerId('build 69'),
+        position: latLng,
+        infoWindow: InfoWindow(title: 'อาคาร 69', snippet: 'อธิบายอาคาร 69'),
+        icon: BitmapDescriptor.defaultMarkerWithHue(170));
+  }
+
+  Marker build91() {
+    LatLng latLng = LatLng(13.823951, 100.511491);
+    return Marker(
+        markerId: MarkerId('build 69'),
+        position: latLng,
+        infoWindow: InfoWindow(title: 'อาคาร 69', snippet: 'อธิบายอาคาร 69'),
+        icon: BitmapDescriptor.defaultMarkerWithHue(170));
+  }
+
+  Marker build97() {
+    LatLng latLng = LatLng(13.824419, 100.511790);
     return Marker(
         markerId: MarkerId('build 69'),
         position: latLng,

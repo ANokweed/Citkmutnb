@@ -20,10 +20,18 @@ class _DiagramState extends State<Diagram> {
     '42',
     '62',
     '63',
+    '64',
     '65',
+    '66',
+    '67',
+    '68',
+    '69',
   ];
   List<List<ImageDiagramModel>> listModel = List();
-  List<Image> picture = [Image.asset("images/diagram.png"),Image.asset("images/diagram1.png")];
+  List<Image> picture = [
+    Image.asset("images/diagram.png"),
+    Image.asset("images/diagram1.png")
+  ];
 
   @override
   void initState() {
@@ -82,7 +90,8 @@ class _DiagramState extends State<Diagram> {
                           color: Colors.orange.shade700, fontSize: 14.5),
                     ),
                   ),
-                  Text('ชั้น ${listModel[index][index2].className}')
+                  Text('ชั้น ${listModel[index][index2].className}',style: TextStyle(
+                          color: Colors.orange.shade700, fontSize: 14.5),)
                 ],
               ),
               Divider(
@@ -117,7 +126,7 @@ class _DiagramState extends State<Diagram> {
     return CarouselSlider(
       items: picture,
       options: CarouselOptions(
-        height: MediaQuery.of(context).size.height,
+        height: 260,
       ),
     );
   }

@@ -1,5 +1,5 @@
 class MyConstant {
-  String domain = 'http://503d0a119bab.ngrok.io';
+  String domain = 'http://57fcca54aa16.ngrok.io';
 
   List<String> categorys = [
     'เครื่องกล',
@@ -38,5 +38,18 @@ class MyConstant {
     '/cit/getRoomhWhereBranch.php',
     '/cit/getRoombWhereBranch.php',
     '/cit/getRoomdWhereBranch.php'
+  ];
+
+  List<String> urlAPIPicture = [
+    'เครื่องกล',
+    'ไฟฟ้า',
+    'โยธา',
+    'วิทย์ประยุกต์และสังคม',
+    'อุตสาหการ',
+    'เครื่องต้นกำลัง',
+    '/cit/getRoomenetWhereRoomAndBranch.php',
+    'การจัดการเทคโนฯและสารสนเทศ',
+    'การเชื่อม',
+    'เตรียมวิศวกรรมไทย-เยอรมัน'
   ];
 }

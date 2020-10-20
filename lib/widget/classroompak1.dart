@@ -1,11 +1,9 @@
 import 'dart:convert';
-// import 'dart:html';
 
 import 'package:citkmutnb/page/show_picture.dart';
 import 'package:citkmutnb/utility/my_constant.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class ClassRoomPak1 extends StatefulWidget {
@@ -20,7 +18,6 @@ class _ClassRoomPak1State extends State<ClassRoomPak1> {
   bool status = true;
   List<String> branchs = List();
   List<List<String>> listRooms = List();
-  List<String> categorys = MyConstant().categorys;
 
   @override
   void initState() {
@@ -28,9 +25,9 @@ class _ClassRoomPak1State extends State<ClassRoomPak1> {
     super.initState();
     category = widget.category;
 
-    readRoom();
-    // print(categorys);
-    if (category.indexOf(category)!= -1) {
+    // readRoom();
+
+    if (category.indexOf(category) != -1) {
       setState(() {
         status = false;
         readRoom();
@@ -41,7 +38,7 @@ class _ClassRoomPak1State extends State<ClassRoomPak1> {
   Future<Null> readRoom() async {
     List<String> urls = MyConstant().urlAPIroom;
     List<String> categorys = MyConstant().categorys;
-    List<String> urls7 = MyConstant().urlAPI;
+    List<String> urls3 = MyConstant().urlAPI;
     int index = 0;
     for (var string in categorys) {
       if (category == string) {
@@ -54,50 +51,25 @@ class _ClassRoomPak1State extends State<ClassRoomPak1> {
           String branch = map['branch'];
 
           if (checkDulicate(branch, branchs)) {
-            for (var string in categorys) {
-              if (category == string) {
-                String url2 =
-                    '${MyConstant().domain}${urls7[index]}?isAdd=true&branch=$branch';
-
-                await Dio().get(url2).then((value) {
-                  var result2 = json.decode(value.data);
-                  List<String> rooms = List();
-                  for (var map in result2) {
-                    String room = map['room'];
-                    if (checkDulicate(room, rooms)) {
-                      rooms.add(room);
-                    }
-                  }
-                  setState(() {
-                    listRooms.add(rooms);
-                  });
-                });
-
-                setState(() {
-                  branchs.add(branch);
-                });
+            String url2 =
+                '${MyConstant().domain}${urls3[index]}?isAdd=true&branch=$branch';
+            await Dio().get(url2).then((value) {
+              var result2 = json.decode(value.data);
+              List<String> rooms = List();
+              for (var map in result2) {
+                String room = map['room'];
+                if (checkDulicate(room, rooms)) {
+                  rooms.add(room);
+                }
               }
-            }
-            // String url2 =
-            //     '${MyConstant().domain}/cit/getRoomenetWhereBranch.php?isAdd=true&branch=$branch';
+              setState(() {
+                listRooms.add(rooms);
+              });
+            });
 
-            // await Dio().get(url2).then((value) {
-            //   var result2 = json.decode(value.data);
-            //   List<String> rooms = List();
-            //   for (var map in result2) {
-            //     String room = map['room'];
-            //     if (checkDulicate(room, rooms)) {
-            //       rooms.add(room);
-            //     }
-            //   }
-            //   setState(() {
-            //     listRooms.add(rooms);
-            //   });
-            // });
-
-            // setState(() {
-            //   branchs.add(branch);
-            // });
+            setState(() {
+              branchs.add(branch);
+            });
           }
         }
       }
@@ -124,13 +96,17 @@ class _ClassRoomPak1State extends State<ClassRoomPak1> {
     return status
         ? Text(category)
         : ListView.builder(
-            padding: EdgeInsets.all(16),
+            padding: EdgeInsets.all(20),
             itemCount: branchs.length,
             itemBuilder: (context, index) => Column(
               children: <Widget>[
                 Row(
                   children: <Widget>[
-                    Text(branchs[index]),
+                    // Icon(Icons.book,color: Colors.blue,),
+                    Text(
+                      branchs[index],
+                      style: TextStyle(color: Colors.blue.shade800),
+                    ),
                   ],
                 ),
                 ListView.builder(
@@ -159,7 +135,7 @@ class _ClassRoomPak1State extends State<ClassRoomPak1> {
                           child: Card(
                             child: Center(
                               child: Padding(
-                                padding: const EdgeInsets.all(8.0),
+                                padding: const EdgeInsets.all(2),
                                 child: Text(
                                   listRooms[index][index2],
                                   style:
