@@ -1,9 +1,11 @@
 import 'dart:convert';
+// import 'dart:html';
 
 import 'package:citkmutnb/page/show_picture.dart';
 import 'package:citkmutnb/utility/my_constant.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class ClassRoomPak1 extends StatefulWidget {
@@ -18,6 +20,7 @@ class _ClassRoomPak1State extends State<ClassRoomPak1> {
   bool status = true;
   List<String> branchs = List();
   List<List<String>> listRooms = List();
+  List<String> categorys = MyConstant().categorys;
 
   @override
   void initState() {
@@ -25,9 +28,9 @@ class _ClassRoomPak1State extends State<ClassRoomPak1> {
     super.initState();
     category = widget.category;
 
-    // readRoom();
-
-    if (category == 'อิเล็กทรอนิกส์') {
+    readRoom();
+    // print(categorys);
+    if (category.indexOf(category)!= -1) {
       setState(() {
         status = false;
         readRoom();
@@ -38,6 +41,7 @@ class _ClassRoomPak1State extends State<ClassRoomPak1> {
   Future<Null> readRoom() async {
     List<String> urls = MyConstant().urlAPIroom;
     List<String> categorys = MyConstant().categorys;
+    List<String> urls7 = MyConstant().urlAPI;
     int index = 0;
     for (var string in categorys) {
       if (category == string) {
@@ -50,25 +54,50 @@ class _ClassRoomPak1State extends State<ClassRoomPak1> {
           String branch = map['branch'];
 
           if (checkDulicate(branch, branchs)) {
-            String url2 =
-                '${MyConstant().domain}/cit/getRoomenetWhereBranch.php?isAdd=true&branch=$branch';
-            await Dio().get(url2).then((value) {
-              var result2 = json.decode(value.data);
-              List<String> rooms = List();
-              for (var map in result2) {
-                String room = map['room'];
-                if (checkDulicate(room, rooms)) {
-                  rooms.add(room);
-                }
-              }
-              setState(() {
-                listRooms.add(rooms);
-              });
-            });
+            for (var string in categorys) {
+              if (category == string) {
+                String url2 =
+                    '${MyConstant().domain}${urls7[index]}?isAdd=true&branch=$branch';
 
-            setState(() {
-              branchs.add(branch);
-            });
+                await Dio().get(url2).then((value) {
+                  var result2 = json.decode(value.data);
+                  List<String> rooms = List();
+                  for (var map in result2) {
+                    String room = map['room'];
+                    if (checkDulicate(room, rooms)) {
+                      rooms.add(room);
+                    }
+                  }
+                  setState(() {
+                    listRooms.add(rooms);
+                  });
+                });
+
+                setState(() {
+                  branchs.add(branch);
+                });
+              }
+            }
+            // String url2 =
+            //     '${MyConstant().domain}/cit/getRoomenetWhereBranch.php?isAdd=true&branch=$branch';
+
+            // await Dio().get(url2).then((value) {
+            //   var result2 = json.decode(value.data);
+            //   List<String> rooms = List();
+            //   for (var map in result2) {
+            //     String room = map['room'];
+            //     if (checkDulicate(room, rooms)) {
+            //       rooms.add(room);
+            //     }
+            //   }
+            //   setState(() {
+            //     listRooms.add(rooms);
+            //   });
+            // });
+
+            // setState(() {
+            //   branchs.add(branch);
+            // });
           }
         }
       }
@@ -120,14 +149,22 @@ class _ClassRoomPak1State extends State<ClassRoomPak1> {
                             String branch = branchs[index];
                             String room = listRooms[index][index2];
                             MaterialPageRoute route = MaterialPageRoute(
-                              builder: (context) => ShowPicture(room: room, branch: branch,),
-                            );Navigator.push(context, route);
+                              builder: (context) => ShowPicture(
+                                room: room,
+                                branch: branch,
+                              ),
+                            );
+                            Navigator.push(context, route);
                           },
                           child: Card(
                             child: Center(
                               child: Padding(
                                 padding: const EdgeInsets.all(8.0),
-                                child: Text(listRooms[index][index2], style: TextStyle(color: Colors.orange.shade900),),
+                                child: Text(
+                                  listRooms[index][index2],
+                                  style:
+                                      TextStyle(color: Colors.orange.shade900),
+                                ),
                               ),
                             ),
                           ),

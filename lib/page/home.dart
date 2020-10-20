@@ -56,7 +56,7 @@ class _HomeState extends State<Home> {
         child: Image.asset('images/news.png'),
       ),activeIcon: Container(width: 48.0,height: 48.0,child: Image.asset('images/anews.png'), ),
       title: Text(
-        'สอบถาม',
+        'FAQ',
         style: TextStyle(color: Colors.white),
       ),
     );

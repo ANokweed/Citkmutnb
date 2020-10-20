@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:citkmutnb/models/image_diagram.model.dart';
 import 'package:citkmutnb/page/mycontent.dart';
 import 'package:citkmutnb/page/show_image_from_diagram.dart';
@@ -22,6 +23,7 @@ class _DiagramState extends State<Diagram> {
     '65',
   ];
   List<List<ImageDiagramModel>> listModel = List();
+  List<Image> picture = [Image.asset("images/diagram.png"),Image.asset("images/diagram1.png")];
 
   @override
   void initState() {
@@ -73,7 +75,7 @@ class _DiagramState extends State<Diagram> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
-                    width: 200,
+                    width: 320,
                     child: Text(
                       listModel[index][index2].nameroom,
                       style: TextStyle(
@@ -82,7 +84,11 @@ class _DiagramState extends State<Diagram> {
                   ),
                   Text('ชั้น ${listModel[index][index2].className}')
                 ],
-              ),Divider(thickness: 3, color: Colors.blue,)
+              ),
+              Divider(
+                thickness: 1.5,
+                color: Colors.blue,
+              )
             ],
           ),
         ),
@@ -107,14 +113,23 @@ class _DiagramState extends State<Diagram> {
     );
   }
 
-  Container showlogo() => Container(
-        width: MediaQuery.of(context).size.width,
-        height: 260,
-        child: Image.asset(
-          'images/diagram.png',
-          fit: BoxFit.cover,
-        ),
-      );
+  CarouselSlider showlogo() {
+    return CarouselSlider(
+      items: picture,
+      options: CarouselOptions(
+        height: MediaQuery.of(context).size.height,
+      ),
+    );
+  }
+
+  // Container showlogo() => Container(
+  //       width: MediaQuery.of(context).size.width,
+  //       height: 260,
+  //       child: Image.asset(
+  //         'images/diagram.png',
+  //         fit: BoxFit.cover,
+  //       ),
+  //     );
 
   bool checkDulicate(String string, List<ImageDiagramModel> list) {
     bool result = true;

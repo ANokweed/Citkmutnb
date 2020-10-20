@@ -9,10 +9,7 @@ class CalenderPage extends StatefulWidget {
 class _CalenderPageState extends State<CalenderPage> {
   @override
   Widget build(BuildContext context) {
-    return Text('คำถาม');
-    // return Scaffold(body: WebView(
-    //   initialUrl: 'http://acdserv.kmutnb.ac.th/academic-calendar',
-    //   javascriptMode: JavascriptMode.unrestricted,
-    // ),);
+    return Container(child: Image.asset('images/work.png'),width: 2000,);
+    
   }
 }
