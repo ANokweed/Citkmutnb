@@ -43,7 +43,7 @@ class _DiagramState extends State<Diagram> {
   @override
   Widget build(BuildContext context) {
     return ListView(
-      padding: EdgeInsets.all(25),
+      padding: EdgeInsets.all(20),
       children: <Widget>[
         showlogo(),
         listModel.length == 0 ? Mystyle().showProgress() : buildListDrtail(),

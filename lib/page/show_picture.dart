@@ -29,6 +29,7 @@ class _ShowPictureState extends State<ShowPicture> {
   Future<Null> readPicture() async {
     String url =
         '${MyConstant().domain}/cit/getRoomenetWhereRoomAndBranch.php?isAdd=true&room=$room&branch=$branch';
+    print('url = $url');
     Response response = await Dio().get(url);
     var result = json.decode(response.data);
 

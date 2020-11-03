@@ -1,5 +1,5 @@
 class MyConstant {
-  String domain = 'http://57fcca54aa16.ngrok.io';
+  String domain = 'http://640df70e60b2.ngrok.io';
 
   List<String> categorys = [
     'เครื่องกล',
@@ -41,15 +41,28 @@ class MyConstant {
   ];
 
   List<String> urlAPIPicture = [
-    'เครื่องกล',
-    'ไฟฟ้า',
-    'โยธา',
-    'วิทย์ประยุกต์และสังคม',
-    'อุตสาหการ',
-    'เครื่องต้นกำลัง',
+    '/cit/getRoomaWhereRoomAndBranch.php',
+    '/cit/getRoomeWhereRoomAndBranch.php',
+    '/cit/getRoomcWhereRoomAndBranch.php',
+    '/cit/getRoomgWhereRoomAndBranch.php',
+    '/cit/getRoomiWhereRoomAndBranch.php',
+    '/cit/getRoomfWhereRoomAndBranch.php',
     '/cit/getRoomenetWhereRoomAndBranch.php',
-    'การจัดการเทคโนฯและสารสนเทศ',
-    'การเชื่อม',
-    'เตรียมวิศวกรรมไทย-เยอรมัน'
+    '/cit/getRoomhWhereRoomAndBranch.php',
+    '/cit/getRoombWhereRoomAndBranch.php',
+    '/cit/getRoomdWhereRoomAndBranch.php'
+  ];
+
+  List<String> nameRoom = [
+    '/cit/image_rooma/',
+    '/cit/image_roome/',
+    '/cit/image_roomc/',
+    '/cit/image_roomg/',
+    '/cit/image_roomi/',
+    '/cit/image_roomf/',
+    '/cit/image_roomenet/',
+    '/cit/image_roomh/',
+    '/cit/image_roomb/',
+    '/cit/image_roomd/'
   ];
 }

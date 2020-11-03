@@ -18,7 +18,10 @@ class _PathState extends State<Path> {
     Colors.amberAccent.shade700,
     Colors.deepPurple.shade900,
     Colors.pinkAccent.shade400,
-    Colors.tealAccent.shade400,Colors.pinkAccent.shade400,Colors.pinkAccent.shade400,Colors.pinkAccent.shade400,
+    Colors.tealAccent.shade400,
+    Colors.pinkAccent.shade400,
+    Colors.pinkAccent.shade400,
+    Colors.pinkAccent.shade400,
   ];
   List<Widget> widgets = List();
   LatLng centerMap = LatLng(13.819177, 100.514284);
@@ -120,27 +123,27 @@ class _PathState extends State<Path> {
   Marker build90() {
     LatLng latLng = LatLng(13.823506, 100.511709);
     return Marker(
-        markerId: MarkerId('build 69'),
+        markerId: MarkerId('build 90'),
         position: latLng,
-        infoWindow: InfoWindow(title: 'อาคาร 69', snippet: 'อธิบายอาคาร 69'),
+        infoWindow: InfoWindow(title: 'อาคาร 90', snippet: 'อธิบายอาคาร 69'),
         icon: BitmapDescriptor.defaultMarkerWithHue(170));
   }
 
   Marker build91() {
     LatLng latLng = LatLng(13.823951, 100.511491);
     return Marker(
-        markerId: MarkerId('build 69'),
+        markerId: MarkerId('build 91'),
         position: latLng,
-        infoWindow: InfoWindow(title: 'อาคาร 69', snippet: 'อธิบายอาคาร 69'),
+        infoWindow: InfoWindow(title: 'อาคาร 91', snippet: 'อธิบายอาคาร 69'),
         icon: BitmapDescriptor.defaultMarkerWithHue(170));
   }
 
   Marker build97() {
     LatLng latLng = LatLng(13.824419, 100.511790);
     return Marker(
-        markerId: MarkerId('build 69'),
+        markerId: MarkerId('build 97'),
         position: latLng,
-        infoWindow: InfoWindow(title: 'อาคาร 69', snippet: 'อธิบายอาคาร 69'),
+        infoWindow: InfoWindow(title: 'อาคาร 97', snippet: 'อธิบายอาคาร 69'),
         icon: BitmapDescriptor.defaultMarkerWithHue(170));
   }
 
@@ -154,7 +157,10 @@ class _PathState extends State<Path> {
       build66(),
       build67(),
       build68(),
-      build69()
+      build69(),
+      build90(),
+      build91(),
+      build97(),
     ].toSet();
   }
 
@@ -208,6 +214,14 @@ class _PathState extends State<Path> {
                         widgets[6],
                         widgets[7],
                         widgets[8],
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        widgets[9],
+                        widgets[10],
+                        widgets[11],
                       ],
                     ),
                   ],
