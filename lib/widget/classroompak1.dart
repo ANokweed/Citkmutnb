@@ -104,7 +104,7 @@ class _ClassRoomPak1State extends State<ClassRoomPak1> {
                 Row(
                   children: <Widget>[Mystyle().mySizeBox(100),
                     // Icon(Icons.book,color: Colors.blue,),
-                    Container(
+                    Container(width: 370,
                       child: Text(
                         branchs[index],
                         style: TextStyle(
