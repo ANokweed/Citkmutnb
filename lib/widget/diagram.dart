@@ -126,7 +126,7 @@ class _DiagramState extends State<Diagram> {
     return CarouselSlider(
       items: picture,
       options: CarouselOptions(
-        height: 260,
+        height: 260,autoPlay: true
       ),
     );
   }

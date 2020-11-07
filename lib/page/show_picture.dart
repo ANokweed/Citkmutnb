@@ -70,7 +70,7 @@ class _ShowPictureState extends State<ShowPicture> {
     return CarouselSlider(
       items: widgets,
       options: CarouselOptions(
-        height: MediaQuery.of(context).size.height,autoPlay: true
+        height: MediaQuery.of(context).size.height,
       ),
     );
   }

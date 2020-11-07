@@ -102,7 +102,7 @@ class _ClassRoomPak1State extends State<ClassRoomPak1> {
             itemBuilder: (context, index) => Column(
               children: <Widget>[
                 Row(
-                  children: <Widget>[Mystyle().mySizeBox(100),
+                  children: <Widget>[Mystyle().mySizeBox(50),
                     // Icon(Icons.book,color: Colors.blue,),
                     Container(width: 370,
                       child: Text(

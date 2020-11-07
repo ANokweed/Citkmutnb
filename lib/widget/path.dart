@@ -19,12 +19,12 @@ class _PathState extends State<Path> {
     Colors.deepPurple.shade900,
     Colors.pinkAccent.shade400,
     Colors.tealAccent.shade400,
-    Colors.pinkAccent.shade400,
-    Colors.pinkAccent.shade400,
-    Colors.pinkAccent.shade400,
+    Colors.red,
+    Colors.orange.shade800,
+    Colors.pinkAccent,
   ];
   List<Widget> widgets = List();
-  LatLng centerMap = LatLng(13.819177, 100.514284);
+  LatLng centerMap = LatLng(13.821105, 100.514558);
 
   @override
   void initState() {
@@ -126,7 +126,7 @@ class _PathState extends State<Path> {
         markerId: MarkerId('build 90'),
         position: latLng,
         infoWindow: InfoWindow(title: 'อาคาร 90', snippet: 'อธิบายอาคาร 69'),
-        icon: BitmapDescriptor.defaultMarkerWithHue(170));
+        icon: BitmapDescriptor.defaultMarkerWithHue(351));
   }
 
   Marker build91() {
@@ -135,7 +135,7 @@ class _PathState extends State<Path> {
         markerId: MarkerId('build 91'),
         position: latLng,
         infoWindow: InfoWindow(title: 'อาคาร 91', snippet: 'อธิบายอาคาร 69'),
-        icon: BitmapDescriptor.defaultMarkerWithHue(170));
+        icon: BitmapDescriptor.defaultMarkerWithHue(30));
   }
 
   Marker build97() {
@@ -144,7 +144,7 @@ class _PathState extends State<Path> {
         markerId: MarkerId('build 97'),
         position: latLng,
         infoWindow: InfoWindow(title: 'อาคาร 97', snippet: 'อธิบายอาคาร 69'),
-        icon: BitmapDescriptor.defaultMarkerWithHue(170));
+        icon: BitmapDescriptor.defaultMarkerWithHue(325));
   }
 
   Set<Marker> mySet() {
