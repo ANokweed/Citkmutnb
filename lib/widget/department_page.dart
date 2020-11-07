@@ -24,6 +24,15 @@ class _DepartmentpageState extends State<Departmentpage> {
 
   @override
   Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('ภาควิชา'),
+      ),
+      body: buildListView(),
+    );
+  }
+
+  ListView buildListView() {
     return ListView(
       scrollDirection: Axis.horizontal,
       children: <Widget>[

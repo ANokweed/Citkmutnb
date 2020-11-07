@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:citkmutnb/page/show_picture.dart';
 import 'package:citkmutnb/utility/my_constant.dart';
+import 'package:citkmutnb/utility/my_style.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -101,11 +102,15 @@ class _ClassRoomPak1State extends State<ClassRoomPak1> {
             itemBuilder: (context, index) => Column(
               children: <Widget>[
                 Row(
-                  children: <Widget>[
+                  children: <Widget>[Mystyle().mySizeBox(100),
                     // Icon(Icons.book,color: Colors.blue,),
-                    Text(
-                      branchs[index],
-                      style: TextStyle(color: Colors.blue.shade800),
+                    Container(
+                      child: Text(
+                        branchs[index],
+                        style: TextStyle(
+                            color: Colors.blue.shade800,
+                            fontWeight: FontWeight.bold),
+                      ),
                     ),
                   ],
                 ),
@@ -115,10 +120,11 @@ class _ClassRoomPak1State extends State<ClassRoomPak1> {
                   physics: ScrollPhysics(),
                   itemCount: listRooms[index].length,
                   itemBuilder: (context, index2) => Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Container(
-                        width: 200,
-                        height: 130,
+                        width: 300,
+                        height: 70,
                         // color: Colors.indigo.shade900,
                         child: GestureDetector(
                           onTap: () {

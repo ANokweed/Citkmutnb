@@ -15,6 +15,15 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('เมนูหลัก'),
+      ),
+      body: buildStack(),
+    );
+  }
+
+  Stack buildStack() {
     return Stack(
       children: <Widget>[
         Mystyle().myBG(),
@@ -34,15 +43,18 @@ class _MainPageState extends State<MainPage> {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: <Widget>[
                 createItem('item4', Service(), true, ''),
-                createItem('item5', History(), false, 'http://research.cit.kmutnb.ac.th/cit/web/index.php?r=page%2Findex'),
-                createItem('item6', History(), false, 'https://grade.icit.kmutnb.ac.th/'),
+                createItem('item5', History(), false,
+                    'http://research.cit.kmutnb.ac.th/cit/web/index.php?r=page%2Findex'),
+                createItem('item6', History(), false,
+                    'https://grade.icit.kmutnb.ac.th/'),
               ],
             ),
             mySizebox(),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
-                createItem('item7', History(), false, 'http://klogic.kmutnb.ac.th:8080/kris/tess/dataQuery.jsp'),
+                createItem('item7', History(), false,
+                    'http://klogic.kmutnb.ac.th:8080/kris/tess/dataQuery.jsp'),
               ],
             )
           ],

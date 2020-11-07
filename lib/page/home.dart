@@ -105,15 +105,15 @@ class _HomeState extends State<Home> {
     return Scaffold(
       body: currentWidget[index],
       bottomNavigationBar: myBottomNav(),
-      appBar: AppBar(
-        title: Text('เมนูหลัก'),
-        actions: <Widget>[
-          // IconButton(
-          //   icon: Icon(Icons.search),
-          //   onPressed: () {},
-          // )
-        ],
-      ),
+      // appBar: AppBar(
+      //   title: Text('เมนูหลัก'),
+      //   actions: <Widget>[
+      //     // IconButton(
+      //     //   icon: Icon(Icons.search),
+      //     //   onPressed: () {},
+      //     // )
+      //   ],
+      // ),
     );
   }
 
