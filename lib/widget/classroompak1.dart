@@ -25,7 +25,7 @@ class _ClassRoomPak1State extends State<ClassRoomPak1> {
     // TODO: implement initState
     super.initState();
     category = widget.category;
-
+    // print('object == $category');
     // readRoom();
 
     if (category.indexOf(category) != -1) {
@@ -102,9 +102,11 @@ class _ClassRoomPak1State extends State<ClassRoomPak1> {
             itemBuilder: (context, index) => Column(
               children: <Widget>[
                 Row(
-                  children: <Widget>[Mystyle().mySizeBox(50),
+                  children: <Widget>[
+                    Mystyle().mySizeBox(50),
                     // Icon(Icons.book,color: Colors.blue,),
-                    Container(width: 370,
+                    Container(
+                      width: 370,
                       child: Text(
                         branchs[index],
                         style: TextStyle(
@@ -134,6 +136,7 @@ class _ClassRoomPak1State extends State<ClassRoomPak1> {
                               builder: (context) => ShowPicture(
                                 room: room,
                                 branch: branch,
+                                category: category ,
                               ),
                             );
                             Navigator.push(context, route);
