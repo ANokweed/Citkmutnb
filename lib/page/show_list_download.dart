@@ -2,7 +2,7 @@ import 'dart:convert';
 // import 'dart:html';
 import 'dart:io';
 
-// import 'package:citkmutnb/models/load_model.dart';
+import 'package:citkmutnb/models/load_model.dart';
 import 'package:citkmutnb/page/show_pdf.dart';
 import 'package:citkmutnb/utility/my_constant.dart';
 import 'package:dio/dio.dart';
@@ -71,7 +71,7 @@ class _ShowiistDownloadState extends State<ShowiistDownload> {
               icon: Icon(Icons.file_download),
               onPressed: () {
                 print('url ===>>> ${fileNames[index]}');
-                lancherToWeb(fileNames[index]);
+                lancherToWeb('${fileNames[index]}');
               },
             ),
             leading: Icon(

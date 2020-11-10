@@ -23,24 +23,25 @@ class _ShowPdfState extends State<ShowPdf> {
     loadpDF();
   }
 
-
-  Future<Null> loadpDF() async{
+  Future<Null> loadpDF() async {
     try {
-
       String url = '${MyConstant().domain}/cit/$catigory/$namePDF';
       var object = await PDFDocument.fromURL(url);
       setState(() {
         pdfDocument = object;
       });
-    } catch (e) {
-    }
-}
+    } catch (e) {}
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: pdfDocument == null ? Center(child: CircularProgressIndicator(),) : PDFViewer(document: pdfDocument),
+      body: pdfDocument == null
+          ? Center(
+              child: CircularProgressIndicator(),
+            )
+          : PDFViewer(document: pdfDocument),
     );
   }
 }

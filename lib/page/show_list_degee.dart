@@ -6,6 +6,7 @@ import 'package:citkmutnb/utility/my_constant.dart';
 import 'package:citkmutnb/utility/my_style.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ShowListDegee extends StatefulWidget {
   final int degeeAInt;
@@ -129,10 +130,20 @@ class _ShowListDegeeState extends State<ShowListDegee> {
     for (var map in result) {
       String string = map['file_name'];
       Widget text = ListTile(
+        trailing: IconButton(
+          icon: Icon(Icons.file_download),
+          onPressed: () {
+            print('url ===>>> $string');
+            lancherToWeb('$string');
+          },
+        ),
         onTap: () {
           print('You click == $string');
           MaterialPageRoute route = MaterialPageRoute(
-            builder: (context) => ShowPdf(namePDF: string,catigory: 'file_degree',),
+            builder: (context) => ShowPdf(
+              namePDF: string,
+              catigory: 'file_degree',
+            ),
           );
           Navigator.push(context, route);
         },
@@ -150,5 +161,11 @@ class _ShowListDegeeState extends State<ShowListDegee> {
 
     }
     return fileNamesWidget;
+  }
+
+  Future<void> lancherToWeb(String url) async {
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {}
   }
 }

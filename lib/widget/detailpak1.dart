@@ -6,6 +6,7 @@ import 'package:citkmutnb/utility/my_constant.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Detailpak1 extends StatefulWidget {
   final String category;
@@ -100,10 +101,21 @@ class _Detailpak1State extends State<Detailpak1> {
             physics: ScrollPhysics(),
             itemCount: listSubTiTles[index].length,
             itemBuilder: (context, index2) => ListTile(
+              trailing: IconButton(
+                icon: Icon(Icons.file_download),
+                onPressed: () {
+                  print('url ===>>> ${listSubTiTles[index][index2]}');
+                  lancherToWeb('${listSubTiTles[index][index2]}');
+                },
+              ),
               onTap: () {
                 MaterialPageRoute route = MaterialPageRoute(
-                  builder: (context) => ShowPdf(catigory: 'file_department',namePDF: listSubTiTles[index][index2],),
-                );Navigator.push(context, route);
+                  builder: (context) => ShowPdf(
+                    catigory: 'file_department',
+                    namePDF: listSubTiTles[index][index2],
+                  ),
+                );
+                Navigator.push(context, route);
               },
               leading: Icon(
                 Icons.check_box,
@@ -115,5 +127,11 @@ class _Detailpak1State extends State<Detailpak1> {
               ),
             ),
           );
+  }
+
+  Future<void> lancherToWeb(String url) async {
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {}
   }
 }
