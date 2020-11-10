@@ -26,6 +26,9 @@ class _DiagramState extends State<Diagram> {
     '67',
     '68',
     '69',
+    '90',
+    '91',
+    '97',
   ];
   List<List<ImageDiagramModel>> listModel = List();
   List<Image> picture = [
@@ -90,8 +93,11 @@ class _DiagramState extends State<Diagram> {
                           color: Colors.orange.shade700, fontSize: 14.5),
                     ),
                   ),
-                  Text('ชั้น ${listModel[index][index2].className}',style: TextStyle(
-                          color: Colors.orange.shade700, fontSize: 14.5),)
+                  Text(
+                    'ชั้น ${listModel[index][index2].className}',
+                    style: TextStyle(
+                        color: Colors.orange.shade700, fontSize: 14.5),
+                  )
                 ],
               ),
               Divider(
@@ -125,9 +131,7 @@ class _DiagramState extends State<Diagram> {
   CarouselSlider showlogo() {
     return CarouselSlider(
       items: picture,
-      options: CarouselOptions(
-        height: 260,autoPlay: true
-      ),
+      options: CarouselOptions(height: 260, autoPlay: true),
     );
   }
 

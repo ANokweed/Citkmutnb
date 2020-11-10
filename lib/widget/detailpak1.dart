@@ -78,10 +78,10 @@ class _Detailpak1State extends State<Detailpak1> {
             itemBuilder: (context, index) => Column(
               children: <Widget>[
                 Row(
-                  children: <Widget>[
+                  children: <Widget>[Padding(padding: EdgeInsets.all(10)),
                     Text(
                       programs[index],
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                      style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blue.shade800),
                     ),
                   ],
                 ),

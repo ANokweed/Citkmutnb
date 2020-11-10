@@ -449,6 +449,20 @@ class _NewsPageState extends State<NewsPage> {
                           ),
                         ],
                       ),
+                      Row(
+                        children: [
+                          Icon(
+                            Icons.sentiment_very_satisfied,
+                          ),
+                          Container(
+                            width: 300,
+                            padding: EdgeInsets.all(5),
+                            child: Text(
+                              '   อุตสาหกรรมศาสตร์บัณฑิต (อส.บ.)',
+                            ),
+                          ),
+                        ],
+                      ),
                     ],
                   ),
                 ),
