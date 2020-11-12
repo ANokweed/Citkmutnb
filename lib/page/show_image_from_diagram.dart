@@ -49,7 +49,7 @@ class _ShoeImageFromDiagramState extends State<ShoeImageFromDiagram> {
 
   Future<Null> readApI() async {
     String url =
-        '${MyConstant().domain}/cit/getDiagramWherenameRoom.php?isAdd=true&nameroom=$nameRoom';
+        '${MyConstant().domain}getDiagramWherenameRoom.php?isAdd=true&nameroom=$nameRoom';
     Response response = await Dio().get(url);
     var result = json.decode(response.data);
     int indexCard = 0;
@@ -65,7 +65,7 @@ class _ShoeImageFromDiagramState extends State<ShoeImageFromDiagram> {
   }
 
   Widget createCard(ImageDiagramModel model, int indexCard) {
-    String string = '${MyConstant().domain}/cit/image_diagram/${model.imgName}';
+    String string = '${MyConstant().domain}image_diagram/${model.imgName}';
     return GestureDetector(
       onTap: () {
         print('you cliek $indexCard');

@@ -30,7 +30,7 @@ class _Detailpak1State extends State<Detailpak1> {
 
   Future<Null> readDepartment() async {
     String url =
-        '${MyConstant().domain}/cit/getDepartmentWheredepartment.php?isAdd=true&department=$category';
+        '${MyConstant().domain}getDepartmentWhereDepartment.php?isAdd=true&department=$category';
     Response response = await Dio().get(url);
     var result = json.decode(response.data);
     // print('result = $result');
@@ -38,7 +38,7 @@ class _Detailpak1State extends State<Detailpak1> {
       String program = map['program'];
       if (checkProgram(program)) {
         String url2 =
-            '${MyConstant().domain}/cit/getDeparWhereDeparAndProgram.php?isAdd=true&department=$category&program=$program';
+            '${MyConstant().domain}getDeparWhereDeparAndProgram.php?isAdd=true&department=$category&program=$program';
         Response response2 = await Dio().get(url2);
         var result2 = json.decode(response2.data);
         List<String> subTitles = List();

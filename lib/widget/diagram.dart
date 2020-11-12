@@ -161,7 +161,7 @@ class _DiagramState extends State<Diagram> {
   Future readAPI() async {
     for (var buildName in builds) {
       String url =
-          '${MyConstant().domain}/cit/getDiagramWhereBuild.php?isAdd=true&build=$buildName';
+          '${MyConstant().domain}getDiagramWhereBuild.php?isAdd=true&build=$buildName';
 
       Response response = await Dio().get(url);
       var result = json.decode(response.data);

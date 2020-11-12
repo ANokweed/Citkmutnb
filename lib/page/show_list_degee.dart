@@ -34,7 +34,7 @@ class _ShowListDegeeState extends State<ShowListDegee> {
   Future<Null> redaData() async {
     try {
       String url =
-          '${MyConstant().domain}/cit/getDegreeWhereDegree.php?isAdd=true&degree=${listdegree[index]}';
+          '${MyConstant().domain}getDegreeWhereDegree.php?isAdd=true&degree=${listdegree[index]}';
       Response response = await Dio().get(url);
       print('respone = $response');
 
@@ -123,7 +123,7 @@ class _ShowListDegeeState extends State<ShowListDegee> {
   Future<List<Widget>> createSetFileName(String string) async {
     List<Widget> fileNamesWidget = List();
     String url =
-        '${MyConstant().domain}/cit/getDegreeWhereDepartment.php?isAdd=true&degree=${listdegree[index]}&department=$string';
+        '${MyConstant().domain}getDegreeWhereDepartment.php?isAdd=true&degree=${listdegree[index]}&department=$string';
     Response response = await Dio().get(url);
     // print('res = $response');
     var result = json.decode(response.data);

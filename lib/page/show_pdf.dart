@@ -25,7 +25,7 @@ class _ShowPdfState extends State<ShowPdf> {
 
   Future<Null> loadpDF() async {
     try {
-      String url = '${MyConstant().domain}/cit/$catigory/$namePDF';
+      String url = '${MyConstant().domain}$catigory/$namePDF';
       var object = await PDFDocument.fromURL(url);
       setState(() {
         pdfDocument = object;

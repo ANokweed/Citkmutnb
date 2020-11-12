@@ -33,7 +33,7 @@ class _ShowiistDownloadState extends State<ShowiistDownload> {
 
   Future<Null> readAllDownload() async {
     String url =
-        '${MyConstant().domain}/cit/getAllDownload.php?Category = $index';
+        '${MyConstant().domain}getAllDownload.php?Category = $index';
 
     Response response = await Dio().get(url);
     var result = json.decode(response.data);
