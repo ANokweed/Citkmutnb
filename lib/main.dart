@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
       DeviceOrientation.portraitUp,
       DeviceOrientation.portraitDown
     ]);
-    return MaterialApp(
+    return MaterialApp(title: 'CIT',
       theme: ThemeData(primarySwatch: Colors.indigo),
       debugShowCheckedModeBanner: false,
       home: Home(), //ส่วนของการเปิดหน้าแรก
