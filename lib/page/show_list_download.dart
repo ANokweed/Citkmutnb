@@ -71,7 +71,7 @@ class _ShowiistDownloadState extends State<ShowiistDownload> {
               icon: Icon(Icons.file_download),
               onPressed: () {
                 print('url ===>>> ${fileNames[index]}');
-                lancherToWeb('${fileNames[index]}');
+                lancherToWeb('${MyConstant().domain}file_download/${fileNames[index]}');
               },
             ),
             leading: Icon(

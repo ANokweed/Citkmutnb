@@ -134,7 +134,7 @@ class _ShowListDegeeState extends State<ShowListDegee> {
           icon: Icon(Icons.file_download),
           onPressed: () {
             print('url ===>>> $string');
-            lancherToWeb('$string');
+            lancherToWeb('${MyConstant().domain}file_degree/${string}');
           },
         ),
         onTap: () {

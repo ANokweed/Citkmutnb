@@ -27,7 +27,7 @@ class _ShowBigPictureState extends State<ShowBigPicture> {
       appBar: AppBar(
         title: Text(model.nameroom),
       ),
-      body: PhotoView(imageProvider: NetworkImage('${MyConstant().domain}/cit/image_diagram/${model.imgName}'))
+      body: PhotoView(imageProvider: NetworkImage('${MyConstant().domain}image_diagram/${model.imgName}'))
       // Center(
       //   child: Image.network(
       //     '${MyConstant().domain}/cit/image_diagram/${model.imgName}')

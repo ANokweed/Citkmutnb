@@ -105,7 +105,7 @@ class _Detailpak1State extends State<Detailpak1> {
                 icon: Icon(Icons.file_download),
                 onPressed: () {
                   print('url ===>>> ${listSubTiTles[index][index2]}');
-                  lancherToWeb('${listSubTiTles[index][index2]}');
+                  lancherToWeb('${MyConstant().domain}file_department/${listSubTiTles[index][index2]}');
                 },
               ),
               onTap: () {
