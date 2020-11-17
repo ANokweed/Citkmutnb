@@ -281,7 +281,7 @@ class _NewsPageState extends State<NewsPage> {
           child: Column(
             children: <Widget>[
               Container(
-                margin: EdgeInsets.only(top:2),
+                margin: EdgeInsets.only(top: 2),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadiusDirectional.circular(15),
                   color: Colors.orange,
@@ -431,7 +431,8 @@ class _NewsPageState extends State<NewsPage> {
                 child: ListTile(
                   title: Container(
                     padding: EdgeInsets.all(10),
-                    child: Text('เรียนจบปริญญาตรีจากวิทยาลัยเทคโนโลยีอุตสาหกรรมจะได้วุฒิการศึกษาอะไร'),
+                    child: Text(
+                        'เรียนจบปริญญาตรีจากวิทยาลัยเทคโนโลยีอุตสาหกรรมจะได้วุฒิการศึกษาอะไร'),
                   ),
                   subtitle: Column(
                     children: [
@@ -444,7 +445,7 @@ class _NewsPageState extends State<NewsPage> {
                             width: 300,
                             padding: EdgeInsets.all(5),
                             child: Text(
-                              '   วุฒิวิศวกรรมศาสตร์บัณฑิต (วศ.บ.)',
+                              '   วุฒิวิศวกรรมศาสตร์บัณฑิต (วศ.บ)',
                             ),
                           ),
                         ],
@@ -458,7 +459,21 @@ class _NewsPageState extends State<NewsPage> {
                             width: 300,
                             padding: EdgeInsets.all(5),
                             child: Text(
-                              '   อุตสาหกรรมศาสตร์บัณฑิต (อส.บ.)',
+                              '   อุตสาหกรรมศาสตร์บัณฑิต (อส.บ)',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Icon(
+                            Icons.sentiment_very_satisfied,
+                          ),
+                          Container(
+                            width: 300,
+                            padding: EdgeInsets.all(5),
+                            child: Text(
+                              '   วิทยาศาสตร์บัณฑิต (วท.บ)',
                             ),
                           ),
                         ],
@@ -505,7 +520,7 @@ class _NewsPageState extends State<NewsPage> {
                             width: 300,
                             padding: EdgeInsets.all(5),
                             child: Text(
-                              '   ประกาศนียบัตรวิชาชีพ (ปวช.)',
+                              '   ประกาศนียบัตรวิชาชีพ (ปวช)',
                             ),
                           ),
                         ],
@@ -519,7 +534,7 @@ class _NewsPageState extends State<NewsPage> {
                             width: 300,
                             padding: EdgeInsets.all(5),
                             child: Text(
-                              '   วิศวกรรมศาสตร์บัณฑิต (วศ.บ.)',
+                              '   วิศวกรรมศาสตร์บัณฑิต (วศ.บ)',
                             ),
                           ),
                         ],
@@ -533,7 +548,7 @@ class _NewsPageState extends State<NewsPage> {
                             width: 300,
                             padding: EdgeInsets.all(5),
                             child: Text(
-                              '   อุตสาหกรรมศาสตร์บัณฑิต (อส.บ.)',
+                              '   อุตสาหกรรมศาสตร์บัณฑิต (อส.บ)',
                             ),
                           ),
                         ],
@@ -547,12 +562,26 @@ class _NewsPageState extends State<NewsPage> {
                             width: 300,
                             padding: EdgeInsets.all(5),
                             child: Text(
-                              '   วิศวกรรมศาสตร์มหาบัณฑิต (วศ.ม.)',
+                              '   วิศวกรรมศาสตร์มหาบัณฑิต (วศ.ม)',
                             ),
                           ),
                         ],
                       ),
-                     ],
+                      Row(
+                        children: [
+                          Icon(
+                            Icons.sentiment_very_satisfied,
+                          ),
+                          Container(
+                            width: 300,
+                            padding: EdgeInsets.all(5),
+                            child: Text(
+                              '   วิทยาศาสตร์บัณฑิต (วท.บ)',
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
                 ),
               ),

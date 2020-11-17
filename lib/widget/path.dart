@@ -44,7 +44,7 @@ class _PathState extends State<Path> {
     return Marker(
         markerId: MarkerId('build 42'),
         position: latLng,
-        infoWindow: InfoWindow(title: 'อาคาร 42', snippet: 'อธิบายอาคาร 42'),
+        infoWindow: InfoWindow(title: 'อาคาร 42'),
         icon: BitmapDescriptor.defaultMarkerWithHue(5));
   }
 
@@ -53,7 +53,7 @@ class _PathState extends State<Path> {
     return Marker(
         markerId: MarkerId('build 62'),
         position: latLng,
-        infoWindow: InfoWindow(title: 'อาคาร 62', snippet: 'อธิบายอาคาร 62'),
+        infoWindow: InfoWindow(title: 'อาคาร 62'),
         icon: BitmapDescriptor.defaultMarkerWithHue(100));
   }
 
@@ -62,7 +62,7 @@ class _PathState extends State<Path> {
     return Marker(
         markerId: MarkerId('build 63'),
         position: latLng,
-        infoWindow: InfoWindow(title: 'อาคาร 63', snippet: 'อธิบายอาคาร 63'),
+        infoWindow: InfoWindow(title: 'อาคาร 63'),
         icon: BitmapDescriptor.defaultMarkerWithHue(200));
   }
 
@@ -71,7 +71,7 @@ class _PathState extends State<Path> {
     return Marker(
         markerId: MarkerId('build 64'),
         position: latLng,
-        infoWindow: InfoWindow(title: 'อาคาร 64', snippet: 'อธิบายอาคาร 64'),
+        infoWindow: InfoWindow(title: 'อาคาร 64'),
         icon: BitmapDescriptor.defaultMarkerWithHue(300));
   }
 
@@ -80,7 +80,7 @@ class _PathState extends State<Path> {
     return Marker(
         markerId: MarkerId('build 65'),
         position: latLng,
-        infoWindow: InfoWindow(title: 'อาคาร 65', snippet: 'อธิบายอาคาร 65'),
+        infoWindow: InfoWindow(title: 'อาคาร 65'),
         icon: BitmapDescriptor.defaultMarkerWithHue(270));
   }
 
@@ -89,7 +89,7 @@ class _PathState extends State<Path> {
     return Marker(
         markerId: MarkerId('build 66'),
         position: latLng,
-        infoWindow: InfoWindow(title: 'อาคาร 66', snippet: 'อธิบายอาคาร 66'),
+        infoWindow: InfoWindow(title: 'อาคาร 66'),
         icon: BitmapDescriptor.defaultMarkerWithHue(40));
   }
 
@@ -98,7 +98,7 @@ class _PathState extends State<Path> {
     return Marker(
         markerId: MarkerId('build 67'),
         position: latLng,
-        infoWindow: InfoWindow(title: 'อาคาร 67', snippet: 'อธิบายอาคาร 67'),
+        infoWindow: InfoWindow(title: 'อาคาร 67'),
         icon: BitmapDescriptor.defaultMarkerWithHue(250));
   }
 
@@ -107,7 +107,7 @@ class _PathState extends State<Path> {
     return Marker(
         markerId: MarkerId('build 68'),
         position: latLng,
-        infoWindow: InfoWindow(title: 'อาคาร 68', snippet: 'อธิบายอาคาร 68'),
+        infoWindow: InfoWindow(title: 'อาคาร 68'),
         icon: BitmapDescriptor.defaultMarkerWithHue(350));
   }
 
@@ -116,7 +116,7 @@ class _PathState extends State<Path> {
     return Marker(
         markerId: MarkerId('build 69'),
         position: latLng,
-        infoWindow: InfoWindow(title: 'อาคาร 69', snippet: 'อธิบายอาคาร 69'),
+        infoWindow: InfoWindow(title: 'อาคาร 69'),
         icon: BitmapDescriptor.defaultMarkerWithHue(170));
   }
 
@@ -125,7 +125,7 @@ class _PathState extends State<Path> {
     return Marker(
         markerId: MarkerId('build 90'),
         position: latLng,
-        infoWindow: InfoWindow(title: 'อาคาร 90', snippet: 'อธิบายอาคาร 69'),
+        infoWindow: InfoWindow(title: 'อาคาร 90'),
         icon: BitmapDescriptor.defaultMarkerWithHue(351));
   }
 
@@ -134,7 +134,7 @@ class _PathState extends State<Path> {
     return Marker(
         markerId: MarkerId('build 91'),
         position: latLng,
-        infoWindow: InfoWindow(title: 'อาคาร 91', snippet: 'อธิบายอาคาร 69'),
+        infoWindow: InfoWindow(title: 'อาคาร 91'),
         icon: BitmapDescriptor.defaultMarkerWithHue(30));
   }
 
@@ -143,7 +143,7 @@ class _PathState extends State<Path> {
     return Marker(
         markerId: MarkerId('build 97'),
         position: latLng,
-        infoWindow: InfoWindow(title: 'อาคาร 97', snippet: 'อธิบายอาคาร 69'),
+        infoWindow: InfoWindow(title: 'อาคาร 97'),
         icon: BitmapDescriptor.defaultMarkerWithHue(325));
   }
 
