@@ -445,7 +445,7 @@ class _NewsPageState extends State<NewsPage> {
                             width: 300,
                             padding: EdgeInsets.all(5),
                             child: Text(
-                              '   วุฒิวิศวกรรมศาสตร์บัณฑิต (วศ.บ)',
+                              '   วุฒิวิศวกรรมศาสตรบัณฑิต (วศ.บ)',
                             ),
                           ),
                         ],
@@ -459,7 +459,7 @@ class _NewsPageState extends State<NewsPage> {
                             width: 300,
                             padding: EdgeInsets.all(5),
                             child: Text(
-                              '   อุตสาหกรรมศาสตร์บัณฑิต (อส.บ)',
+                              '   อุตสาหกรรมศาสตรบัณฑิต (อส.บ)',
                             ),
                           ),
                         ],
@@ -473,7 +473,7 @@ class _NewsPageState extends State<NewsPage> {
                             width: 300,
                             padding: EdgeInsets.all(5),
                             child: Text(
-                              '   วิทยาศาสตร์บัณฑิต (วท.บ)',
+                              '   วิทยาศาสตรบัณฑิต (วท.บ)',
                             ),
                           ),
                         ],
@@ -534,7 +534,7 @@ class _NewsPageState extends State<NewsPage> {
                             width: 300,
                             padding: EdgeInsets.all(5),
                             child: Text(
-                              '   วิศวกรรมศาสตร์บัณฑิต (วศ.บ)',
+                              '   วิศวกรรมศาสตรบัณฑิต (วศ.บ)',
                             ),
                           ),
                         ],
@@ -548,7 +548,7 @@ class _NewsPageState extends State<NewsPage> {
                             width: 300,
                             padding: EdgeInsets.all(5),
                             child: Text(
-                              '   อุตสาหกรรมศาสตร์บัณฑิต (อส.บ)',
+                              '   อุตสาหกรรมศาสตรบัณฑิต (อส.บ)',
                             ),
                           ),
                         ],
@@ -562,7 +562,7 @@ class _NewsPageState extends State<NewsPage> {
                             width: 300,
                             padding: EdgeInsets.all(5),
                             child: Text(
-                              '   วิศวกรรมศาสตร์มหาบัณฑิต (วศ.ม)',
+                              '   วิศวกรรมศาสตรมหาบัณฑิต (วศ.ม)',
                             ),
                           ),
                         ],
@@ -576,7 +576,21 @@ class _NewsPageState extends State<NewsPage> {
                             width: 300,
                             padding: EdgeInsets.all(5),
                             child: Text(
-                              '   วิทยาศาสตร์บัณฑิต (วท.บ)',
+                              '   วุฒิวิศวกรรมศาสตรดุษฎีบัณฑิต (วศ.ด)',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Icon(
+                            Icons.sentiment_very_satisfied,
+                          ),
+                          Container(
+                            width: 300,
+                            padding: EdgeInsets.all(5),
+                            child: Text(
+                              '   วิทยาศาสตรบัณฑิต (วท.บ)',
                             ),
                           ),
                         ],

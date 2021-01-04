@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:citkmutnb/page/bigpicclass.dart';
 import 'package:citkmutnb/utility/my_constant.dart';
 import 'package:citkmutnb/utility/my_style.dart';
 import 'package:dio/dio.dart';
@@ -75,7 +76,7 @@ class _ShowPictureState extends State<ShowPicture> {
     );
   }
 
-  CarouselSlider buildCarouselSlider() {
+  Widget buildCarouselSlider() {
     return CarouselSlider(
       items: widgets,
       options: CarouselOptions(
